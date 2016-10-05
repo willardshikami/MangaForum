@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "931409359807",
+    "firebase_url": "https://mangaforum-signin.firebaseio.com",
+    "project_id": "mangaforum-signin",
+    "storage_bucket": "mangaforum-signin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:931409359807:android:fa44340f9ad7aee2",
+        "android_client_info": {
+          "package_name": "com.example.willardpc.mangaforum"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "931409359807-rsaiu35ddot1kts7lle23cmjqte2d9f4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5klE286yU5id1L9H7z9fc8ir2GA0VPQc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
