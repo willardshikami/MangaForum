@@ -1,6 +1,7 @@
 package com.example.willardpc.mangaforum;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -34,9 +35,15 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        //INITIALIZE VIEWS
-
-        firebaseAuth = FirebaseAuth.getInstance();
+        //INITIALIZE VIEWS HERE
+        firebaseAuth = FirebaseAuth.getInstance();{
+            //START PROFILE ACTIVITY
+            if (firebaseAuth.getCurrentUser() != null){
+                //START PROFILE ACTIVITY
+                finish();
+                startActivity(new Intent(getApplicationContext(), BodyActivity.class));
+            }
+        }
 
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
         editTextUsername = (EditText) findViewById(R.id.editTextUsername);
@@ -81,10 +88,13 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+                        progressDialog.dismiss();
                         if (task.isSuccessful()){
                             //USER RESGISTERED SUCCESSFULLY
                             //PROFILE ACTIVITY STARTS HERE
-                            Toast.makeText(RegisterActivity.this, "Registered successfully", Toast.LENGTH_SHORT).show();
+                                finish();
+                                startActivity(new Intent(getApplicationContext(), BodyActivity.class));
+
                         }else {
                             Toast.makeText(RegisterActivity.this, "Failed to register, please try again", Toast.LENGTH_SHORT).show();
                         }
@@ -101,6 +111,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         if(view == textViewSignin){
             //OPENS LOGIN ACTIVITY
+            startActivity(new Intent(this, LoginActivity.class));
         }
     }
 }
