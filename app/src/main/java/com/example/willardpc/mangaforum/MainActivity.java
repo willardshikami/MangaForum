@@ -83,4 +83,5 @@ public class MainActivity extends AppCompatActivity {
             mFragmentTitleList.add(title);
         }
     }
+
 }
