@@ -39,7 +39,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
             if (firebaseAuth.getCurrentUser() != null){
                 //START PROFILE ACTIVITY
                 finish();
-                startActivity(new Intent(getApplicationContext(), BodyActivity.class));
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
         }
 
@@ -86,7 +86,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
                         if (task.isSuccessful()){
                             finish();
-                            startActivity(new Intent(getApplicationContext(), BodyActivity.class));
+                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         }
                     }
                 });
