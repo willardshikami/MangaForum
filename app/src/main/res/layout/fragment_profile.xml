@@ -34,7 +34,6 @@
             android:layout_below="@+id/header_cover_image"
             android:elevation="4dp">
 
-
         </RelativeLayout>
 
 
@@ -91,7 +90,7 @@
             android:layout_alignStart="@+id/user_profile_photo"
             android:layout_marginBottom="40dp" />
 
-        <TextView
+        <EditText
             android:id="@+id/user_profile_short_bio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -100,6 +99,6 @@
             android:textSize="18sp"
             android:layout_above="@+id/profile_layout"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="15dp"/>
     </RelativeLayout>
 </ScrollView>
