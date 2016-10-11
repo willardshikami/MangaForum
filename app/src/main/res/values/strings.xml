@@ -1,22 +1,22 @@
 <resources>
     <string name="app_name">Manga Forum</string>
 
-        <string name="next">NEXT</string>
-        <string name="skip">SKIP</string>
-        <string name="start">GOT IT</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
 
-        <string name="slide_1_title">Welcome!</string>
-        <string name="slide_1_desc">Join an Amazing Anime Community!</string>
+    <string name="slide_1_title">Welcome!</string>
+    <string name="slide_1_desc">Join an Amazing Anime Community!</string>
 
-        <string name="slide_2_title">Discuss</string>
-        <string name="slide_2_desc">Come and discuss Anime and Japanise culture with us!</string>
+    <string name="slide_2_title">Discuss</string>
+    <string name="slide_2_desc">Come and discuss Anime and Japanise culture with us!</string>
 
-        <string name="slide_3_title">Anime by Category</string>
-        <string name="slide_3_desc">Browse through the different categories i.e. Anime/Manga Episode reviews, Recommendations and Thoughts!</string>
+    <string name="slide_3_title">Anime by Category</string>
+    <string name="slide_3_desc">Browse through the different categories i.e. Anime/Manga Episode reviews, Recommendations and Thoughts!</string>
 
-        <string name="slide_4_title">Participate</string>
-        <string name="slide_4_desc">You can Write an Anime episode review, recommendation comparison or something a little different!</string>
+    <string name="slide_4_title">Participate</string>
+    <string name="slide_4_desc">You can Write an Anime episode review, recommendation comparison or something a little different!</string>
 
-        <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
 
 </resources>
