@@ -30,6 +30,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="USER LOGIN"
             android:id="@+id/textViewLogin"
+            android:textStyle="bold"
             android:layout_above="@+id/linearLayout"
             android:layout_centerHorizontal="true"
             android:textAlignment="center"

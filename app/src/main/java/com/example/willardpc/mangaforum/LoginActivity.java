@@ -3,6 +3,7 @@ package com.example.willardpc.mangaforum;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
@@ -28,6 +29,8 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
     private FirebaseAuth firebaseAuth;
 
+    private TextView t;
+
 
 
     @Override
@@ -52,7 +55,13 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
         buttonLogin.setOnClickListener(this);
         textViewSignup.setOnClickListener(this);
+
+        t = (TextView) findViewById(R.id.textViewLogin);
+        Typeface myCustomFonts=Typeface.createFromAsset(getAssets(), "fonts/VarelaRound-Regular.ttf");
+        t.setTypeface(myCustomFonts);
+
     }
+
 
     private void userLogin(){
         String email = editTextEmail.getText().toString().trim();
