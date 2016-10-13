@@ -4,7 +4,6 @@ public class TopicModel {
 
     String cardName;
     int imageResourceId;
-    int isfav;
     int isturned;
 
     public int getIsturned() {

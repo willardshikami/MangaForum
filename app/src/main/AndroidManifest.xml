@@ -21,6 +21,13 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".BodyActivity" />
+        <activity android:name=".EReviews" />
+        <activity android:name=".Recommendations" />
+        <activity android:name=".Thoughts" />
+        <activity android:name=".Fall" />
+        <activity android:name=".Summer" />
+        <activity android:name=".FanArt" />
+        <activity android:name=".CReviews"></activity>
     </application>
 
 </manifest>

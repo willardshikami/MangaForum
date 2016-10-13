@@ -1,8 +1,10 @@
 package com.example.willardpc.mangaforum;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -24,7 +26,7 @@ public class HomeFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initializeList();
-        getActivity().setTitle("Topics");
+        getActivity().setTitle("Anime");
     }
 
     @Override
@@ -40,7 +42,6 @@ public class HomeFragment extends Fragment {
             MyRecyclerView.setAdapter(new MyAdapter(listitems));
         }
         MyRecyclerView.setLayoutManager(MyLayoutManager);
-
         return view;
     }
 
@@ -59,7 +60,7 @@ public class HomeFragment extends Fragment {
 
         @Override
         public MyViewHolder onCreateViewHolder(ViewGroup parent,int viewType) {
-            // create a new view
+            // create new view
             View view = LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.item_list, parent, false);
             MyViewHolder holder = new MyViewHolder(view);
@@ -67,11 +68,47 @@ public class HomeFragment extends Fragment {
         }
 
         @Override
-        public void onBindViewHolder(final MyViewHolder holder, int position) {
+        public void onBindViewHolder(MyViewHolder holder, final int position) {
 
             holder.titleTextView.setText(list.get(position).getCardName());
             holder.coverImageView.setImageResource(list.get(position).getImageResourceId());
             holder.coverImageView.setTag(list.get(position).getImageResourceId());
+            holder.cv.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v) {
+                    switch (position){
+                        case 0:
+                            Intent intent0 = new Intent(v.getContext(), CReviews.class);
+                            v.getContext().startActivity(intent0);
+                            break;
+                        case 1:
+                            Intent intent1 = new Intent(v.getContext(),Recommendations.class);
+                            v.getContext().startActivity(intent1);
+                            break;
+                        case 2:
+                            Intent intent2 = new Intent(v.getContext(),Thoughts.class);
+                            v.getContext().startActivity(intent2);
+                            break;
+                        case 3:
+                            Intent intent3 = new Intent(v.getContext(),Fall.class);
+                            v.getContext().startActivity(intent3);
+                            break;
+                        case 4:
+                            Intent intent4 = new Intent(v.getContext(),Summer.class);
+                            v.getContext().startActivity(intent4);
+                            break;
+                        case 5:
+                            Intent intent5 = new Intent(v.getContext(),FanArt.class);
+                            v.getContext().startActivity(intent5);
+                            break;
+                        case 6:
+                            Intent intent6 = new Intent(v.getContext(),EReviews.class);
+                            v.getContext().startActivity(intent6);
+                            break;
+                    }
+                }
+
+            });
         }
 
         @Override
@@ -80,18 +117,20 @@ public class HomeFragment extends Fragment {
         }
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public class MyViewHolder extends RecyclerView.ViewHolder{
 
         public TextView titleTextView;
         public ImageView coverImageView;
+        public CardView cv;
 
-        public MyViewHolder(View v) {
-            super(v);
-            titleTextView = (TextView) v.findViewById(R.id.titleTextView);
-            coverImageView = (ImageView) v.findViewById(R.id.coverImageView);
 
+        public MyViewHolder(View view) {
+            super(view);
+            titleTextView = (TextView) view.findViewById(R.id.titleTextView);
+            coverImageView = (ImageView) view.findViewById(R.id.coverImageView);
+            cv = (CardView) view.findViewById(R.id.card_view);
             }
-        }
+    }
 
     public void initializeList() {
         listitems.clear();
@@ -104,7 +143,6 @@ public class HomeFragment extends Fragment {
             item.setImageResourceId(Images[i]);
             item.setIsturned(0);
             listitems.add(item);
-
         }
 
     }
