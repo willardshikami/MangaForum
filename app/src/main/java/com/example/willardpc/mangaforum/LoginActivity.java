@@ -70,7 +70,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         if (TextUtils.isEmpty(email)){
             //EMAIL IS EMPTY
             Toast.makeText(this, "Please enter your email", Toast.LENGTH_SHORT).show();
-            //STOPS FUNCTION FROM EXECUTING FURRTHER
+            //STOPS FUNCTION FROM EXECUTING FURTHER
             return;
         }
 
