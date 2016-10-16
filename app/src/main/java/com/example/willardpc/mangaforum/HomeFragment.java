@@ -26,7 +26,7 @@ public class HomeFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initializeList();
-        getActivity().setTitle("Anime");
+        getActivity().setTitle("Manga Forum");
     }
 
     @Override
@@ -69,7 +69,6 @@ public class HomeFragment extends Fragment {
 
         @Override
         public void onBindViewHolder(MyViewHolder holder, final int position) {
-
             holder.titleTextView.setText(list.get(position).getCardName());
             holder.coverImageView.setImageResource(list.get(position).getImageResourceId());
             holder.coverImageView.setTag(list.get(position).getImageResourceId());
@@ -78,7 +77,7 @@ public class HomeFragment extends Fragment {
                 public void onClick(View v) {
                     switch (position){
                         case 0:
-                            Intent intent0 = new Intent(v.getContext(), CReviews.class);
+                            Intent intent0 = new Intent(v.getContext(), EReviews.class);
                             v.getContext().startActivity(intent0);
                             break;
                         case 1:
@@ -102,7 +101,7 @@ public class HomeFragment extends Fragment {
                             v.getContext().startActivity(intent5);
                             break;
                         case 6:
-                            Intent intent6 = new Intent(v.getContext(),EReviews.class);
+                            Intent intent6 = new Intent(v.getContext(),CReviews.class);
                             v.getContext().startActivity(intent6);
                             break;
                     }

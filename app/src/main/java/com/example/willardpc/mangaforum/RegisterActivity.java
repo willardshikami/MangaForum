@@ -17,6 +17,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import me.anwarshahriar.calligrapher.Calligrapher;
+
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener{
 
     //DEFINE VIEWS
@@ -34,6 +36,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        Calligrapher calligrapher = new Calligrapher(this);
+        calligrapher.setFont(this, "fonts/VarelaRound-Regular.ttf", true);
 
         //INITIALIZE VIEWS HERE
         firebaseAuth = FirebaseAuth.getInstance();{

@@ -18,6 +18,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import me.anwarshahriar.calligrapher.Calligrapher;
+
 public class WelcomeActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
@@ -50,6 +52,9 @@ public class WelcomeActivity extends AppCompatActivity {
         dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
         btnSkip = (Button) findViewById(R.id.btn_skip);
         btnNext = (Button) findViewById(R.id.btn_next);
+        Calligrapher calligrapher = new Calligrapher(this);
+        calligrapher.setFont(this, "fonts/VarelaRound-Regular.ttf", true);
+
 
 
         // layouts of all welcome sliders
@@ -59,6 +64,7 @@ public class WelcomeActivity extends AppCompatActivity {
                 R.layout.welcome_slide2,
                 R.layout.welcome_slide3,
                 R.layout.welcome_slide4};
+
 
         // adding bottom dots
         addBottomDots(0);

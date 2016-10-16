@@ -44,7 +44,7 @@
             android:layout_marginTop="5dp"
             android:orientation="vertical">
 
-            <TextView
+            <EditText
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -52,9 +52,10 @@
                 android:clickable="true"
                 android:elevation="4dp"
                 android:padding="20dp"
-                android:text="ABOUT" />
+                android:text="ABOUT"
+                android:id="@+id/about_user"/>
 
-            <TextView
+            <EditText
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -64,13 +65,14 @@
                 android:clickable="true"
                 android:elevation="4dp"
                 android:padding="20dp"
-                android:text="ANIME LIST" />
+                android:text="ANIME LIST"
+                android:id="@+id/user_animelist"/>
 
 
         </LinearLayout>
 
         <ImageView
-            android:id="@+id/settings_menu"
+            android:id="@+id/settings_menu_button"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/ic_settings_white_24dp"

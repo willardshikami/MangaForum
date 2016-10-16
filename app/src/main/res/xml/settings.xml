@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:key="edit_profile"
+        android:title="Edit"
+        android:summary="Edit and save your profile"/>
+
+    <Preference
+        android:key="log_out"
+        android:title="Logout"/>
+
+</PreferenceScreen>
