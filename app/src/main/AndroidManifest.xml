@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.willardpc.mangaforum">
+    package="com.example.willardpc.mangaforum" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -9,8 +9,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".WelcomeActivity">
+        android:theme="@style/AppTheme" >
+        <activity android:name=".WelcomeActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,7 +27,7 @@
         <activity android:name=".Summer" />
         <activity android:name=".FanArt" />
         <activity android:name=".CReviews" />
-        <activity android:name=".BodyActivity"></activity>
+        <activity android:name=".BodyActivity" />
     </application>
 
 </manifest>

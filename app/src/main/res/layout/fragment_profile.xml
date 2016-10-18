@@ -52,7 +52,7 @@
                 android:clickable="true"
                 android:elevation="4dp"
                 android:padding="20dp"
-                android:text="ABOUT"
+                android:hint="Im from Japan and i draw Mangas"
                 android:id="@+id/about_user"/>
 
             <EditText
@@ -65,7 +65,7 @@
                 android:clickable="true"
                 android:elevation="4dp"
                 android:padding="20dp"
-                android:text="ANIME LIST"
+                android:hint="Bleach, One Piece, Akame ga Kill..."
                 android:id="@+id/user_animelist"/>
 
 
@@ -84,8 +84,8 @@
             android:id="@+id/user_profile_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Username"
-            android:textColor="#FFF"
+            android:hint="John Doe"
+            android:textColorHint="#fff"
             android:textSize="24sp"
             android:layout_above="@+id/profile_layout"
             android:layout_alignLeft="@+id/user_profile_photo"
@@ -96,8 +96,8 @@
             android:id="@+id/user_profile_short_bio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bio"
-            android:textColor="#FFF"
+            android:hint="Im a Human"
+            android:textColorHint="#fff"
             android:textSize="18sp"
             android:layout_above="@+id/profile_layout"
             android:layout_centerHorizontal="true"
