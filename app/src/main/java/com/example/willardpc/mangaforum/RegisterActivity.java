@@ -23,7 +23,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     //DEFINE VIEWS
     private Button buttonRegister;
-    private EditText editTextUsername;
     private EditText editTextEmail;
     private EditText editTextPassword;
     private TextView textViewSignin;
@@ -50,7 +49,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         }
 
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
-        editTextUsername = (EditText) findViewById(R.id.editTextUsername);
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         textViewSignin = (TextView) findViewById(R.id.textViewSignin);

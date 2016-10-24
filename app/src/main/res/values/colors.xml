@@ -35,4 +35,10 @@
     <item>@color/dot_dark_screen3</item>
     <item>@color/dot_dark_screen4</item>
 </array>
+
+    <!-- Green -->
+    <color name="green_temp">#ef5350</color>
+    <color name="green_dark">#f44336</color>
+    <color name="bright_green">#e53935</color>
+    <color name="button_green">#d32f2f</color>
 </resources>

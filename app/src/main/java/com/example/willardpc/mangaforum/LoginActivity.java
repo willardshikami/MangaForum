@@ -21,6 +21,7 @@ import me.anwarshahriar.calligrapher.Calligrapher;
 
 public class LoginActivity extends Activity implements View.OnClickListener{
 
+
     private Button buttonLogin;
     private EditText editTextEmail;
     private EditText editTextPassword;
@@ -55,9 +56,12 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         textViewSignup = (TextView) findViewById(R.id.textViewSignup);
 
         buttonLogin.setOnClickListener(this);
+
+
         textViewSignup.setOnClickListener(this);
 
     }
+
 
 
     private void userLogin(){
@@ -90,7 +94,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         progressDialog.dismiss();
 
-                        if (task.isSuccessful()){
+                        if (task.isSuccessful()) {
                             finish();
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         }
@@ -101,12 +105,14 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
     @Override
     public void onClick(View view) {
-        if (view == buttonLogin){
+        if (view == buttonLogin) {
             userLogin();
         }
-        if (view == textViewSignup){
-            finish();
-            startActivity(new Intent(this, RegisterActivity.class));
-        }
+            if (view == textViewSignup) {
+                finish();
+                startActivity(new Intent(this, RegisterActivity.class));
+            }
     }
+
+
 }
